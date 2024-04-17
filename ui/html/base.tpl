@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{template "title" .}}</title>
-    <link rel="stylesheet" href="../../static/css/pico.min.css" />
+    <link rel="stylesheet" href="/static/css/pico.min.css" />
 </head>
 <body>
     <header>
@@ -14,7 +14,7 @@
     {{template "nav" .}}
     <main class="container-fluid">
         {{with .Flash}}
-        <div class="flash">{{.}}</div>
+        <div class="container-fluid">{{.}}</div>
         {{end}}
         {{template "main" .}}
     </main>
