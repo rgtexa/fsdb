@@ -1,23 +1,21 @@
 {{define "nav"}}
-<nav>
-    <div>
-        <a href='/'>Home</a>
-        <a href='/about'>About</a>
+<nav class="container">
+    <ul>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/about'>About</a></li>
         {{if .IsAuthenticated}}
-            <a href='/snippet/create'>Create snippet</a>
+        <li><a href='/snippet/create'>Create snippet</a></li>
         {{end}}
-    </div>
-    <div>
         {{if .IsAuthenticated}}
-            <a href='/user/account'>Account</a>
-            <form action='/user/logout' method='POST'>
-                <input type='hidden' name='csrf_token' value='{{.CSRFToken}}'>
-                <button>Logout</button>
-            </form>
+        <li><a href='/user/account'>Account</a></li>
+        <form action='/user/logout' method='POST'>
+            <input type='hidden' name='csrf_token' value='{{.CSRFToken}}'>
+            <li><button>Logout</button></li>
+        </form>
         {{else}}
-            <a href='/user/signup'>Signup</a>
-            <a href='/user/login'>Login</a>
+            <li><a href='/user/signup'>Signup</a></li>
+            <li><a href='/user/login'>Login</a></li>
         {{end}}
-    </div>
+    </ul>
 </nav>
 {{end}}

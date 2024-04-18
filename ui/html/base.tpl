@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="/static/css/pico.min.css" />
 </head>
 <body>
-    <header>
+    <header class="container">
         <h2>FSdb</h2>
     </header>
     {{template "nav" .}}
-    <main class="container-fluid">
+    <main class="container">
         {{with .Flash}}
-        <div class="container-fluid">{{.}}</div>
+        <div class="container">{{.}}</div>
         {{end}}
         {{template "main" .}}
     </main>
-    <footer class="container-fluid">
+    <footer class="container">
         <p>&copy;2024 rgtexa. All rights reserved.</p>
     </footer>
 </body>
